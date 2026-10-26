@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en-IN" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AANGAN Interiors — Residential interior design studio</title>
+  <meta name="description"
+    content="AANGAN Interiors designs calm, personal homes shaped around how you live — interior design, renovation, turnkey interiors, space planning and styling.">
+  <meta property="og:title" content="AANGAN Interiors — Spaces that feel like home">
+  <meta property="og:description"
+    content="Thoughtfully designed interiors shaped around your lifestyle, your rituals, and the way you want to live.">
+  <meta property="og:image" content="assets/images/site/hero-living@2x.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#FAFAF7">
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "InteriorDesigner",
+    "name": "AANGAN Interiors",
+    "slogan": "Where life finds its space.",
+    "description": "Residential interior design studio.",
+    "url": "https://www.example.com/",
+    "address": { "@type": "PostalAddress", "streetAddress": "[To be supplied]", "addressLocality": "[City]", "addressCountry": "IN" },
+    "telephone": "[To be supplied]"
+  }
+  </script>
+  <script defer src="js/nav.js"></script>
+  <script defer src="js/reveal.js"></script>
+</head>
+
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- header:start (synced from partials/header.html — run node build.mjs) -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="AANGAN Interiors — home">
+        <img class="logo__emblem" src="assets/logo/emblem-charcoal.svg" alt="" width="48" height="44">
+        <span class="logo__text"><span class="logo__word">AANGAN</span><span class="logo__desc">INTERIORS</span></span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="projects.html" data-nav="projects">Projects</a></li>
+          <li><a class="nav__link" href="services.html" data-nav="services">Services</a></li>
+          <li><a class="nav__link" href="about.html" data-nav="about">About</a></li>
+          <li><a class="nav__link" href="contact.html" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary site-header__cta" href="consultation.html">Book a consultation</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+        <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+  <div class="drawer" id="drawer" hidden>
+    <div class="drawer__backdrop" data-drawer-close></div>
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="drawer__top">
+        <a class="logo" href="index.html" aria-label="AANGAN Interiors — home">
+          <img class="logo__emblem" src="assets/logo/emblem-charcoal.svg" alt="" width="40" height="36">
+          <span class="logo__text"><span class="logo__word">AANGAN</span><span
+              class="logo__desc">INTERIORS</span></span>
+        </a>
+        <button class="drawer__close" type="button" aria-label="Close menu" data-drawer-close>&times;</button>
+      </div>
+      <ul class="drawer__list">
+        <li><a href="projects.html" data-nav="projects">Projects</a></li>
+        <li><a href="services.html" data-nav="services">Services</a></li>
+        <li><a href="about.html" data-nav="about">About</a></li>
+        <li><a href="contact.html" data-nav="contact">Contact</a></li>
+      </ul>
+      <a class="btn btn--primary btn--block" href="consultation.html">Book a consultation</a>
+    </div>
+  </div>
+  <!-- header:end -->
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="home-hero" aria-labelledby="hero-title">
+      <div class="home-hero__text reveal">
+        <p class="t-eyebrow">Residential design studio</p>
+        <h1 class="t-hero" id="hero-title">Spaces that feel like home.</h1>
+        <p class="t-lead">Thoughtfully designed interiors shaped around your lifestyle, your rituals, and the way you
+          want to live.</p>
+        <div class="btn-row btn-row--stack">
+          <a class="btn btn--primary" href="projects.html">Explore our projects</a>
+          <a class="btn btn--secondary" href="consultation.html">Book a consultation</a>
+        </div>
+      </div>
+      <picture class="media home-hero__media">
+        <source type="image/webp"
+          srcset="assets/images/site/hero-living.webp 1600w, assets/images/site/hero-living@2x.webp 2400w"
+          sizes="(max-width: 1023px) 100vw, 58vw">
+        <img src="assets/images/site/hero-living.jpg"
+          srcset="assets/images/site/hero-living.jpg 1600w, assets/images/site/hero-living@2x.jpg 2400w"
+          sizes="(max-width: 1023px) 100vw, 58vw"
+          alt="Calm living room with a curved boucle sofa, sage throw and daylight from a tall window" width="1600"
+          height="900" fetchpriority="high">
+      </picture>
+    </section>
+
+    <!-- Studio introduction -->
+    <section class="section" aria-labelledby="philosophy-title">
+      <div class="container split">
+        <!-- LICENSING: courtyard photo is a third-party project image (Aryaman Design Box) — NOT licensed. Get written permission or replace before launch. -->
+        <picture class="media media--4x5">
+          <source type="image/webp"
+            srcset="assets/images/site/courtyard.webp 800w, assets/images/site/courtyard@2x.webp 1400w"
+            sizes="(max-width: 1023px) 100vw, 40vw">
+          <img src="assets/images/site/courtyard.jpg"
+            alt="Open-to-sky Indian courtyard with kota stone, cane chairs, potted palms and arched timber screens"
+            width="800" height="1000" loading="lazy">
+        </picture>
+        <div class="split__text">
+          <p class="t-eyebrow">Our philosophy</p>
+          <h2 class="t-h1" id="philosophy-title">Good design begins with understanding how you live.</h2>
+          <p class="t-lead">Before we choose a single material, we listen — to where the morning tea happens, where the
+            children study, where guests gather. An aangan was always the heart of the home. We design every room with
+            the same intent: spaces that hold everyday life gracefully.</p>
+          <p class="quote-line">We don’t simply design rooms. We create spaces where life happens.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured projects -->
+    <section class="section section--alt" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-head section-head--row reveal">
+          <div class="stack" style="--stack: var(--space-16)">
+            <p class="t-eyebrow">Selected work</p>
+            <h2 class="t-h1" id="work-title">Spaces with a story to tell.</h2>
+          </div>
+          <a class="link" href="projects.html">Explore all projects <span class="link__arrow"
+              aria-hidden="true">→</span></a>
+        </div>
+        <ul class="grid-projects" role="list">
+          <li>
+            <a class="card-project" href="project-detail.html?p=sage-living-room">
+              <picture class="media media--4x5">
+                <source type="image/webp"
+                  srcset="assets/images/projects/sage-living.webp 800w, assets/images/projects/sage-living@2x.webp 1400w"
+                  sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <img src="assets/images/projects/sage-living.jpg" alt="Sage-toned living room with boucle sofa"
+                  width="800" height="1000" loading="lazy">
+              </picture>
+              <span class="card-project__meta"><span class="t-eyebrow">Residential</span><span
+                  class="sample-tag">Sample</span></span>
+              <span class="card-project__title">Sage Living Room</span>
+              <span class="t-small">Location to be confirmed · Illustrative, not a completed project</span>
+            </a>
+          </li>
+          <li>
+            <a class="card-project" href="project-detail.html?p=timber-bedroom">
+              <picture class="media media--4x5">
+                <source type="image/webp"
+                  srcset="assets/images/projects/timber-bedroom.webp 800w, assets/images/projects/timber-bedroom@2x.webp 1400w"
+                  sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <img src="assets/images/projects/timber-bedroom.jpg"
+                  alt="Bedroom with walnut wall panelling and an upholstered green headboard" width="800" height="1000"
+                  loading="lazy">
+              </picture>
+              <span class="card-project__meta"><span class="t-eyebrow">Residential</span><span
+                  class="sample-tag">Sample</span></span>
+              <span class="card-project__title">Timber Bedroom</span>
+              <span class="t-small">Location to be confirmed · Illustrative, not a completed project</span>
+            </a>
+          </li>
+          <li>
+            <a class="card-project" href="project-detail.html?p=quiet-kitchen">
+              <picture class="media media--4x5">
+                <source type="image/webp"
+                  srcset="assets/images/projects/quiet-kitchen.webp 800w, assets/images/projects/quiet-kitchen@2x.webp 1400w"
+                  sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw">
+                <img src="assets/images/projects/quiet-kitchen.jpg"
+                  alt="Calm kitchen with matte cabinetry, timber boards and handmade ceramics" width="800" height="1000"
+                  loading="lazy">
+              </picture>
+              <span class="card-project__meta"><span class="t-eyebrow">Renovation</span><span
+                  class="sample-tag">Sample</span></span>
+              <span class="card-project__title">Quiet Kitchen</span>
+              <span class="t-small">Location to be confirmed · Illustrative, not a completed project</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Services overview -->
+    <section class="section" aria-labelledby="services-title">
+      <div class="container services-overview">
+        <div class="services-overview__intro">
+          <p class="t-eyebrow">What we do</p>
+          <h2 class="t-h2" id="services-title">Considered design, from first idea to final detail.</h2>
+          <div><a class="btn btn--secondary" href="services.html">View services</a></div>
+        </div>
+        <ul class="service-list" role="list">
+          <li><a href="services.html#interior-design"><span class="service-list__no">01</span><span
+                class="service-list__name">Interior Design</span><span class="service-list__desc">Complete design for a
+                room or a whole home.</span><span class="service-list__go" aria-hidden="true">→</span></a></li>
+          <li><a href="services.html#renovation"><span class="service-list__no">02</span><span
+                class="service-list__name">Renovation</span><span class="service-list__desc">Rethinking existing spaces
+                around how you live now.</span><span class="service-list__go" aria-hidden="true">→</span></a></li>
+          <li><a href="services.html#turnkey"><span class="service-list__no">03</span><span
+                class="service-list__name">Turnkey Interiors</span><span class="service-list__desc">One team
+                coordinating design through execution.</span><span class="service-list__go"
+                aria-hidden="true">→</span></a></li>
+          <li><a href="services.html#space-planning"><span class="service-list__no">04</span><span
+                class="service-list__name">Space Planning</span><span class="service-list__desc">Layouts, storage and
+                circulation that simply work.</span><span class="service-list__go" aria-hidden="true">→</span></a></li>
+          <li><a href="services.html#styling"><span class="service-list__no">05</span><span
+                class="service-list__name">Styling &amp; Décor</span><span class="service-list__desc">Textiles, art and
+                objects that make it yours.</span><span class="service-list__go" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Design process -->
+    <section class="section section--sage" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="t-eyebrow">How we work</p>
+          <h2 class="t-h1" id="process-title">Five unhurried steps.</h2>
+        </div>
+        <ol class="process" role="list">
+          <li class="process__step"><span class="process__no">01</span>
+            <h3 class="t-h3">Discover</h3>
+            <p class="t-small">We listen to how you live, what you love and what isn’t working.</p>
+          </li>
+          <li class="process__step"><span class="process__no">02</span>
+            <h3 class="t-h3">Concept</h3>
+            <p class="t-small">A direction for layout, mood and materials you can react to.</p>
+          </li>
+          <li class="process__step"><span class="process__no">03</span>
+            <h3 class="t-h3">Design</h3>
+            <p class="t-small">Detailed drawings, finishes and furniture, refined together.</p>
+          </li>
+          <li class="process__step"><span class="process__no">04</span>
+            <h3 class="t-h3">Execution</h3>
+            <p class="t-small">Coordinated work on site with regular check-ins.</p>
+          </li>
+          <li class="process__step"><span class="process__no">05</span>
+            <h3 class="t-h3">Handover</h3>
+            <p class="t-small">A finished, styled home — ready to be lived in.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Why AANGAN -->
+    <section class="section" aria-labelledby="why-title">
+      <div class="container split split--reverse">
+        <picture class="media why-media">
+          <source type="image/webp"
+            srcset="assets/images/site/why-linen-bedroom.webp 800w, assets/images/site/why-linen-bedroom@2x.webp 1400w"
+            sizes="(max-width: 1023px) 100vw, 40vw">
+          <img src="assets/images/site/why-linen-bedroom.jpg"
+            alt="Bright bedroom with a linen throw, olive tree and soft morning light" width="800" height="914"
+            loading="lazy">
+        </picture>
+        <div class="split__text">
+          <p class="t-eyebrow">Why AANGAN</p>
+          <h2 class="t-h1" id="why-title">Homes that look beautiful and work every day.</h2>
+          <ul class="why-list" role="list">
+            <li>
+              <h3 class="t-h4">Personalised design</h3>
+              <p class="t-body">Every decision begins with your routines, not a trend board.</p>
+            </li>
+            <li>
+              <h3 class="t-h4">Thoughtful materials</h3>
+              <p class="t-body">Linen, stone, timber and lime — chosen to age gracefully.</p>
+            </li>
+            <li>
+              <h3 class="t-h4">Beauty with function</h3>
+              <p class="t-body">Storage, light and circulation solved before decoration.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials — SAMPLE until real reviews are supplied -->
+    <section class="section section--alt" aria-labelledby="words-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="t-eyebrow" id="words-title">In their words</p>
+        </div>
+        <div class="testimonials">
+          <figure class="testimonial">
+            <p class="sample-tag">Sample testimonial — replace with a real client review</p>
+            <blockquote class="testimonial__quote">“They noticed how we actually use our home — where the morning tea
+              happens, where the kids do homework — and designed around it.”</blockquote>
+            <figcaption class="t-small">Client name · City</figcaption>
+          </figure>
+          <figure class="testimonial">
+            <p class="sample-tag">Sample testimonial — replace with a real client review</p>
+            <blockquote class="testimonial__quote">“Every choice was explained simply, and the finished rooms feel calm
+              without feeling empty.”</blockquote>
+            <figcaption class="t-small">Client name · City</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation CTA -->
+    <section class="section cta" aria-labelledby="cta-title">
+      <div class="container cta__inner">
+        <p class="t-eyebrow t-eyebrow--muted">Begin with a conversation</p>
+        <h2 class="t-h1" id="cta-title">Let’s create a space that feels like you.</h2>
+        <p class="t-lead">Tell us about your space and how you live in it. We’ll get back within two working days.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="consultation.html">Book a consultation</a>
+          <a class="btn btn--secondary" href="projects.html">Explore projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer:start (synced from partials/footer.html — run node build.mjs) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="logo" href="index.html" aria-label="AANGAN Interiors — home">
+            <img class="logo__emblem" src="assets/logo/emblem-ivory.svg" alt="" width="72" height="65">
+            <span class="logo__text"><span class="logo__word">AANGAN</span><span
+                class="logo__desc">INTERIORS</span></span>
+          </a>
+          <p class="footer__tagline">Where life finds its space.</p>
+        </div>
+        <nav class="footer__col" aria-labelledby="f-studio">
+          <h2 class="t-eyebrow" id="f-studio">Studio</h2>
+          <ul>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-labelledby="f-services">
+          <h2 class="t-eyebrow" id="f-services">Services</h2>
+          <ul>
+            <li><a href="services.html#interior-design">Interior Design</a></li>
+            <li><a href="services.html#renovation">Renovation</a></li>
+            <li><a href="services.html#turnkey">Turnkey Interiors</a></li>
+            <li><a href="services.html#space-planning">Space Planning</a></li>
+            <li><a href="services.html#styling">Styling &amp; Décor</a></li>
+          </ul>
+        </nav>
+        <div class="footer__col">
+          <h2 class="t-eyebrow">Contact</h2>
+          <!-- PLACEHOLDER: replace with real studio details -->
+          <ul>
+            <li>[Studio address]</li>
+            <li>[Phone number]</li>
+            <li>[Email address]</li>
+            <li>Instagram · LinkedIn (to verify)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> AANGAN Interiors</p>
+        <p class="footer__legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer:end -->
+</body>
+
+</html>

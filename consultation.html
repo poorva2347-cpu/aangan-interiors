@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en-IN" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a consultation — AANGAN Interiors</title>
+  <meta name="description" content="Request a consultation with AANGAN Interiors in four short steps.">
+  <meta property="og:title" content="Book a consultation — AANGAN Interiors">
+  <meta property="og:description" content="Request a consultation with AANGAN Interiors in four short steps.">
+  <meta property="og:image" content="assets/images/site/hero-living@2x.jpg">
+  <meta name="theme-color" content="#FAFAF7">
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script defer src="js/nav.js"></script>
+  <script defer src="js/reveal.js"></script>
+  <script defer src="js/config.js"></script>
+  <script defer src="js/forms.js"></script>
+</head>
+
+<body data-page="consultation">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- header:start (synced from partials/header.html — run node build.mjs) -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="AANGAN Interiors — home">
+        <img class="logo__emblem" src="assets/logo/emblem-charcoal.svg" alt="" width="48" height="44">
+        <span class="logo__text"><span class="logo__word">AANGAN</span><span class="logo__desc">INTERIORS</span></span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="projects.html" data-nav="projects">Projects</a></li>
+          <li><a class="nav__link" href="services.html" data-nav="services">Services</a></li>
+          <li><a class="nav__link" href="about.html" data-nav="about">About</a></li>
+          <li><a class="nav__link" href="contact.html" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary site-header__cta" href="consultation.html">Book a consultation</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+        <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+  <div class="drawer" id="drawer" hidden>
+    <div class="drawer__backdrop" data-drawer-close></div>
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="drawer__top">
+        <a class="logo" href="index.html" aria-label="AANGAN Interiors — home">
+          <img class="logo__emblem" src="assets/logo/emblem-charcoal.svg" alt="" width="40" height="36">
+          <span class="logo__text"><span class="logo__word">AANGAN</span><span
+              class="logo__desc">INTERIORS</span></span>
+        </a>
+        <button class="drawer__close" type="button" aria-label="Close menu" data-drawer-close>&times;</button>
+      </div>
+      <ul class="drawer__list">
+        <li><a href="projects.html" data-nav="projects">Projects</a></li>
+        <li><a href="services.html" data-nav="services">Services</a></li>
+        <li><a href="about.html" data-nav="about">About</a></li>
+        <li><a href="contact.html" data-nav="contact">Contact</a></li>
+      </ul>
+      <a class="btn btn--primary btn--block" href="consultation.html">Book a consultation</a>
+    </div>
+  </div>
+  <!-- header:end -->
+  <main id="main">
+    <section class="section" style="padding-top:var(--space-64)">
+      <div class="container consult" id="consult-top">
+        <div class="stack reveal" style="--stack:var(--space-20, 1.25rem)">
+          <p class="t-eyebrow">Book a consultation</p>
+          <h1 class="t-h1">Tell us about your project.</h1>
+          <p class="t-lead">Four short steps, about five minutes. Your answers are saved as you go.</p>
+        </div>
+        <div class="alert alert--note">
+          <p>This form requests a consultation. It doesn’t book an appointment automatically — we’ll contact you to
+            agree a time.</p>
+        </div>
+        <div id="consult-flow" class="stack" style="--stack:var(--space-32)">
+          <div>
+            <ol class="progress" aria-label="Progress">
+              <li><span class="progress__step">Step 1</span><span>Project</span></li>
+              <li><span class="progress__step">Step 2</span><span>Requirements</span></li>
+              <li><span class="progress__step">Step 3</span><span>Budget &amp; timeline</span></li>
+              <li><span class="progress__step">Step 4</span><span>Contact &amp; review</span></li>
+            </ol>
+            <p class="progress__label-mobile" aria-live="polite" style="margin-top:var(--space-12)"></p>
+          </div>
+          <form id="consult-form" novalidate data-validate class="stack" style="--stack:var(--space-24)">
+            <div class="alert alert--error" id="consult-errors" tabindex="-1" hidden role="alert">
+              <p class="alert__title"></p>
+              <p></p>
+            </div>
+            <div class="form-card">
+              <fieldset class="consult__step" data-title="Project basics">
+                <legend class="t-h3" tabindex="-1">Project basics</legend>
+                <div class="stack">
+                  <div class="field"><label class="field__label" for="project_type">Project type <span class="req"
+                        aria-hidden="true">*</span></label><select class="field__control" id="project_type"
+                      name="project_type" required aria-describedby="project_type-help project_type-err">
+                      <option value="">Select an option</option>
+                      <option>Residential</option>
+                      <option>Commercial</option>
+                      <option>Renovation</option>
+                    </select>
+                    <p class="field__help" id="project_type-help"></p>
+                    <p class="field__error" id="project_type-err" aria-live="polite"></p>
+                  </div>
+                  <div class="field"><label class="field__label" for="property_type">Property type <span class="req"
+                        aria-hidden="true">*</span></label><select class="field__control" id="property_type"
+                      name="property_type" required aria-describedby="property_type-help property_type-err">
+                      <option value="">Select an option</option>
+                      <option>Apartment</option>
+                      <option>Villa</option>
+                      <option>Bungalow</option>
+                      <option>Office</option>
+                      <option>Other</option>
+                    </select>
+                    <p class="field__help" id="property_type-help"></p>
+                    <p class="field__error" id="property_type-err" aria-live="polite"></p>
+                  </div>
+                  <div class="field"><label class="field__label" for="city">City or location <span class="req"
+                        aria-hidden="true">*</span></label><input class="field__control" id="city" name="city"
+                      type="text" required autocomplete="address-level2" placeholder="e.g. Vadodara"
+                      aria-describedby="city-help city-err">
+                    <p class="field__help" id="city-help">Where is the property?</p>
+                    <p class="field__error" id="city-err" aria-live="polite"></p>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="consult__step" data-title="Requirements" hidden>
+                <legend class="t-h3" tabindex="-1">Requirements</legend>
+                <div class="stack">
+                  <div class="field"><label class="field__label" for="area">Approximate area <span
+                        class="req">(optional)</span></label><input class="field__control" id="area" name="area"
+                      type="text" placeholder="e.g. 1,200 sq ft" aria-describedby="area-help area-err">
+                    <p class="field__help" id="area-help">An estimate is fine</p>
+                    <p class="field__error" id="area-err" aria-live="polite"></p>
+                  </div>
+                  <fieldset class="choices">
+                    <legend>Rooms to design</legend>
+                    <div class="chips"><label class="chip"><input type="checkbox" name="rooms"
+                          value="Living">Living</label><label class="chip"><input type="checkbox" name="rooms"
+                          value="Kitchen">Kitchen</label><label class="chip"><input type="checkbox" name="rooms"
+                          value="Bedrooms">Bedrooms</label><label class="chip"><input type="checkbox" name="rooms"
+                          value="Dining">Dining</label><label class="chip"><input type="checkbox" name="rooms"
+                          value="Study">Study</label><label class="chip"><input type="checkbox" name="rooms"
+                          value="Whole home">Whole home</label></div>
+                  </fieldset>
+                  <fieldset class="choices">
+                    <legend>Preferred style</legend>
+                    <div class="chips"><label class="chip"><input type="checkbox" name="style"
+                          value="Contemporary">Contemporary</label><label class="chip"><input type="checkbox"
+                          name="style" value="Minimal">Minimal</label><label class="chip"><input type="checkbox"
+                          name="style" value="Indian modern">Indian modern</label><label class="chip"><input
+                          type="checkbox" name="style" value="Not sure yet">Not sure yet</label></div>
+                  </fieldset>
+                  <div class="upload">
+                    <p class="field__label">Reference images <span class="req">(optional)</span></p>
+                    <label class="upload__zone"><span class="upload__title">Drag images here or browse</span><span
+                        class="t-small">JPG or PNG · up to 5 files · 10 MB each</span><input type="file"
+                        name="attachment" accept="image/jpeg,image/png" multiple
+                        aria-label="Add reference images"></label>
+                    <ul class="upload__list" role="list"></ul>
+                    <p class="field__error" aria-live="polite"></p>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="consult__step" data-title="Budget &amp; timeline" hidden>
+                <legend class="t-h3" tabindex="-1">Budget &amp; timeline</legend>
+                <div class="stack">
+                  <div class="field"><label class="field__label" for="budget">Budget range <span
+                        class="req">(optional)</span></label><select class="field__control" id="budget" name="budget"
+                      aria-describedby="budget-help budget-err">
+                      <option value="">Select an option</option>
+                      <option>[Range 1 — to be set by studio]</option>
+                      <option>[Range 2]</option>
+                      <option>[Range 3]</option>
+                      <option>Prefer to discuss</option>
+                    </select>
+                    <p class="field__help" id="budget-help">Ranges help us suggest the right scope — they are not a
+                      quote.</p>
+                    <p class="field__error" id="budget-err" aria-live="polite"></p>
+                  </div>
+                  <div class="field"><label class="field__label" for="start">Expected start date <span
+                        class="req">(optional)</span></label><input class="field__control" id="start" name="start"
+                      type="month" placeholder="" aria-describedby="start-help start-err">
+                    <p class="field__help" id="start-help">Approximate is fine</p>
+                    <p class="field__error" id="start-err" aria-live="polite"></p>
+                  </div>
+                  <div class="field"><label class="field__label" for="timeframe">Desired completion timeframe <span
+                        class="req">(optional)</span></label><select class="field__control" id="timeframe"
+                      name="timeframe" aria-describedby="timeframe-help timeframe-err">
+                      <option value="">Select an option</option>
+                      <option>Within 3 months</option>
+                      <option>3–6 months</option>
+                      <option>6–12 months</option>
+                      <option>Flexible</option>
+                    </select>
+                    <p class="field__help" id="timeframe-help"></p>
+                    <p class="field__error" id="timeframe-err" aria-live="polite"></p>
+                  </div>
+                  <div class="field"><label class="field__label" for="notes">Additional notes <span
+                        class="req">(optional)</span></label><textarea class="field__control" id="notes" name="notes"
+                      placeholder="Anything else we should know?" aria-describedby="notes-help notes-err"></textarea>
+                    <p class="field__help" id="notes-help"></p>
+                    <p class="field__error" id="notes-err" aria-live="polite"></p>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="consult__step" data-title="Contact &amp; review" hidden>
+                <legend class="t-h3" tabindex="-1">Contact &amp; review</legend>
+                <div class="stack">
+                  <div class="field-row">
+                    <div class="field"><label class="field__label" for="name">Full name <span class="req"
+                          aria-hidden="true">*</span></label><input class="field__control" id="name" name="name"
+                        type="text" required autocomplete="name" placeholder="e.g. Ananya Shah"
+                        aria-describedby="name-help name-err">
+                      <p class="field__help" id="name-help"></p>
+                      <p class="field__error" id="name-err" aria-live="polite"></p>
+                    </div>
+                    <div class="field"><label class="field__label" for="email">Email <span class="req"
+                          aria-hidden="true">*</span></label><input class="field__control" id="email" name="email"
+                        type="email" required autocomplete="email" placeholder="name@example.com"
+                        aria-describedby="email-help email-err">
+                      <p class="field__help" id="email-help"></p>
+                      <p class="field__error" id="email-err" aria-live="polite"></p>
+                    </div>
+                  </div>
+                  <div class="field"><label class="field__label" for="phone">Phone <span class="req"
+                        aria-hidden="true">*</span></label><input class="field__control" id="phone" name="phone"
+                      type="tel" required autocomplete="tel" placeholder="+91" aria-describedby="phone-help phone-err">
+                    <p class="field__help" id="phone-help">For scheduling the consultation</p>
+                    <p class="field__error" id="phone-err" aria-live="polite"></p>
+                  </div>
+                  <fieldset class="choices">
+                    <legend>Preferred contact method</legend>
+                    <div class="choices__row"><label class="choice"><input type="radio" name="contact_method"
+                          value="Email" checked> Email</label><label class="choice"><input type="radio"
+                          name="contact_method" value="Phone call"> Phone call</label><label class="choice"><input
+                          type="radio" name="contact_method" value="WhatsApp"> WhatsApp</label></div>
+                  </fieldset>
+                  <dl class="review" id="review"></dl>
+                  <div class="field"><label class="choice"><input type="checkbox" id="consent" name="consent"
+                        value="yes" required data-label="Consent" aria-describedby="consent-err"> I agree to be
+                      contacted about this consultation request. <span class="req" aria-hidden="true">*</span></label>
+                    <p class="field__error" id="consent-err" aria-live="polite"></p>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off"
+              aria-hidden="true">
+            <div class="consult__actions"><button class="btn btn--secondary" type="button"
+                id="consult-back">Back</button><button class="btn btn--primary" type="submit"
+                id="consult-next">Continue</button></div>
+            <div class="alert alert--error" id="consult-failed" tabindex="-1" hidden role="alert">
+              <p class="alert__title">We couldn’t send your request.</p>
+              <p>Your answers are saved. Check your connection and <button type="button" id="consult-retry" class="link"
+                  style="border:0;padding:0;min-height:0;background:none;text-decoration:underline">try again</button>,
+                or email us at [studio email].</p>
+            </div>
+          </form>
+        </div>
+        <div class="form-card result" id="consult-success" hidden>
+          <div class="alert alert--success" role="status">
+            <p class="alert__title">Consultation request received.</p>
+            <p>Thank you. This is a request, not a confirmed appointment — we’ll contact you within two working days to
+              agree a time.</p>
+          </div>
+          <h2 class="t-h3" tabindex="-1">What happens next</h2>
+          <ol>
+            <li>We review your answers.</li>
+            <li>A designer contacts you by your preferred method.</li>
+            <li>Together we agree a time for the first conversation.</li>
+          </ol>
+          <div class="btn-row btn-row--stack"><a class="btn btn--primary" href="index.html">Return home</a><a
+              class="btn btn--secondary" href="projects.html">Explore projects</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- footer:start (synced from partials/footer.html — run node build.mjs) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="logo" href="index.html" aria-label="AANGAN Interiors — home">
+            <img class="logo__emblem" src="assets/logo/emblem-ivory.svg" alt="" width="72" height="65">
+            <span class="logo__text"><span class="logo__word">AANGAN</span><span
+                class="logo__desc">INTERIORS</span></span>
+          </a>
+          <p class="footer__tagline">Where life finds its space.</p>
+        </div>
+        <nav class="footer__col" aria-labelledby="f-studio">
+          <h2 class="t-eyebrow" id="f-studio">Studio</h2>
+          <ul>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-labelledby="f-services">
+          <h2 class="t-eyebrow" id="f-services">Services</h2>
+          <ul>
+            <li><a href="services.html#interior-design">Interior Design</a></li>
+            <li><a href="services.html#renovation">Renovation</a></li>
+            <li><a href="services.html#turnkey">Turnkey Interiors</a></li>
+            <li><a href="services.html#space-planning">Space Planning</a></li>
+            <li><a href="services.html#styling">Styling &amp; Décor</a></li>
+          </ul>
+        </nav>
+        <div class="footer__col">
+          <h2 class="t-eyebrow">Contact</h2>
+          <!-- PLACEHOLDER: replace with real studio details -->
+          <ul>
+            <li>[Studio address]</li>
+            <li>[Phone number]</li>
+            <li>[Email address]</li>
+            <li>Instagram · LinkedIn (to verify)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> AANGAN Interiors</p>
+        <p class="footer__legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer:end -->
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-IN" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project — AANGAN Interiors</title>
+  <meta name="description" content="Project details from AANGAN Interiors.">
+  <meta property="og:title" content="Project — AANGAN Interiors">
+  <meta property="og:description" content="Project details from AANGAN Interiors.">
+  <meta property="og:image" content="assets/images/site/hero-living@2x.jpg">
+  <meta name="theme-color" content="#FAFAF7">
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script defer src="data/projects.js"></script>
+  <script defer src="js/data.js"></script>
+  <script defer src="js/nav.js"></script>
+  <script defer src="js/reveal.js"></script>
+  <script defer src="js/project.js"></script>
+  <script defer src="js/accordion.js"></script>
+</head>
+<body data-page="projects">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- header:start (synced from partials/header.html — run node build.mjs) -->
+<header class="site-header" id="site-header">
+  <div class="container site-header__inner">
+    <a class="logo" href="index.html" aria-label="AANGAN Interiors — home">
+      <img class="logo__emblem" src="assets/logo/emblem-charcoal.svg" alt="" width="48" height="44">
+      <span class="logo__text"><span class="logo__word">AANGAN</span><span class="logo__desc">INTERIORS</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="projects.html" data-nav="projects" aria-current="page">Projects</a></li>
+        <li><a class="nav__link" href="services.html" data-nav="services">Services</a></li>
+        <li><a class="nav__link" href="about.html" data-nav="about">About</a></li>
+        <li><a class="nav__link" href="contact.html" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary site-header__cta" href="consultation.html">Book a consultation</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+      <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer__backdrop" data-drawer-close></div>
+  <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer__top">
+      <a class="logo" href="index.html" aria-label="AANGAN Interiors — home">
+        <img class="logo__emblem" src="assets/logo/emblem-charcoal.svg" alt="" width="40" height="36">
+        <span class="logo__text"><span class="logo__word">AANGAN</span><span class="logo__desc">INTERIORS</span></span>
+      </a>
+      <button class="drawer__close" type="button" aria-label="Close menu" data-drawer-close>&times;</button>
+    </div>
+    <ul class="drawer__list">
+      <li><a href="projects.html" data-nav="projects" aria-current="page">Projects</a></li>
+      <li><a href="services.html" data-nav="services">Services</a></li>
+      <li><a href="about.html" data-nav="about">About</a></li>
+      <li><a href="contact.html" data-nav="contact">Contact</a></li>
+    </ul>
+    <a class="btn btn--primary btn--block" href="consultation.html">Book a consultation</a>
+  </div>
+</div>
+  <!-- header:end -->
+  <main id="main">
+    <article id="project" aria-busy="true">
+      <div class="container detail-head">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="projects.html">Projects</a></li><li id="crumb-current" aria-current="page"></li></ol></nav>
+        <p class="t-eyebrow" id="p-eyebrow"></p>
+        <h1 class="t-hero" id="p-title"></h1>
+        <p class="t-lead" id="p-intro"></p>
+      </div>
+      <div class="container"><div class="media detail-hero" id="p-hero"></div><dl class="meta" id="p-meta"></dl></div>
+      <section class="section" aria-labelledby="brief-title">
+        <div class="container concept">
+          <div class="stack" style="--stack:var(--space-16)"><p class="t-eyebrow">The brief</p><h2 class="t-h2" id="brief-title">A room for the whole family, every day.</h2></div>
+          <div class="stack"><p class="t-body" id="p-brief"></p><p class="t-body" id="p-concept"></p></div>
+        </div>
+      </section>
+      <section class="section section--alt" aria-labelledby="palette-title">
+        <div class="container stack" style="--stack:var(--space-32)"><h2 class="t-eyebrow" id="palette-title">Materials &amp; palette</h2><ul class="palette" id="p-palette" role="list"></ul></div>
+      </section>
+      <section class="section" aria-labelledby="gallery-title">
+        <div class="container">
+          <div class="section-head section-head--row"><div class="stack" style="--stack:var(--space-12)"><p class="t-eyebrow">Gallery</p><h2 class="t-h2" id="gallery-title">Inside the home</h2></div><p class="t-small">Select any image to view it full screen.</p></div>
+          <div class="gallery" id="p-gallery"></div>
+        </div>
+      </section>
+      <section class="section section--alt" id="p-ba-section" aria-labelledby="ba-title">
+        <div class="container stack" style="--stack:var(--space-24)">
+          <p class="t-eyebrow" id="ba-title">Before &amp; after</p>
+          <div class="ba" id="p-ba"></div>
+          <p class="t-small" id="p-ba-note"></p>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="related-title">
+        <div class="container"><div class="section-head"><p class="t-eyebrow">More like this</p><h2 class="t-h2" id="related-title">Related projects</h2></div><ul class="grid-projects" id="p-related" role="list"></ul></div>
+      </section>
+    </article>
+    <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+      <div class="lightbox__top"><span class="lightbox__count" aria-live="polite"></span><button class="lightbox__btn" type="button" data-lb-close aria-label="Close image viewer">✕</button></div>
+      <div class="lightbox__stage"><button class="lightbox__btn" type="button" data-lb-prev aria-label="Previous image">←</button><img alt=""><button class="lightbox__btn" type="button" data-lb-next aria-label="Next image">→</button></div>
+      <p class="lightbox__caption"></p>
+    </dialog>
+    <section class="section cta" aria-labelledby="cta-title">
+      <div class="container cta__inner">
+        <p class="t-eyebrow t-eyebrow--muted">Begin with a conversation</p>
+        <h2 class="t-h1" id="cta-title">Imagining something like this for your home?</h2>
+        <p class="t-lead">Tell us about your space and how you live in it. We’ll get back within two working days.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="consultation.html">Book a consultation</a><a class="btn btn--secondary" href="projects.html">Explore projects</a></div>
+      </div>
+    </section>
+  </main>
+  <!-- footer:start (synced from partials/footer.html — run node build.mjs) -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="logo" href="index.html" aria-label="AANGAN Interiors — home">
+          <img class="logo__emblem" src="assets/logo/emblem-ivory.svg" alt="" width="72" height="65">
+          <span class="logo__text"><span class="logo__word">AANGAN</span><span class="logo__desc">INTERIORS</span></span>
+        </a>
+        <p class="footer__tagline">Where life finds its space.</p>
+      </div>
+      <nav class="footer__col" aria-labelledby="f-studio">
+        <h2 class="t-eyebrow" id="f-studio">Studio</h2>
+        <ul><li><a href="projects.html">Projects</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </nav>
+      <nav class="footer__col" aria-labelledby="f-services">
+        <h2 class="t-eyebrow" id="f-services">Services</h2>
+        <ul><li><a href="services.html#interior-design">Interior Design</a></li><li><a href="services.html#renovation">Renovation</a></li><li><a href="services.html#turnkey">Turnkey Interiors</a></li><li><a href="services.html#space-planning">Space Planning</a></li><li><a href="services.html#styling">Styling &amp; Décor</a></li></ul>
+      </nav>
+      <div class="footer__col">
+        <h2 class="t-eyebrow">Contact</h2>
+        <!-- PLACEHOLDER: replace with real studio details -->
+        <ul><li>[Studio address]</li><li>[Phone number]</li><li>[Email address]</li><li>Instagram · LinkedIn (to verify)</li></ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span data-year>2026</span> AANGAN Interiors</p>
+      <p class="footer__legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></p>
+    </div>
+  </div>
+</footer>
+  <!-- footer:end -->
+</body>
+</html>
